@@ -1,0 +1,19 @@
+<div class="age">
+  <label for="employeeName">Enter the name here:</label>
+  <input type="text" id="employeeName" name="name" [(ngModel)] = "name" />
+  <label for="employeeAge">Enter the age here:</label>
+  <input type="number" id="employeeAge" name="age" [(ngModel)] = "age" />
+
+  <button type="submit" (click)="submitDetails()">Submit</button>
+</div>
+
+<div>
+  <p *ngIf="age > 17 ">{{name}}, you are eligible!</p>
+</div>
+
+<div *ngFor="let emp of employee">
+  <div class="employee">
+    Name: {{emp.name}}<br>
+    Age:{{emp.age}}
+  </div>
+</div>

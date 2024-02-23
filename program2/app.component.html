@@ -1,0 +1,15 @@
+<div style="text-align: center;">
+  <h1>Shopping List App</h1>
+
+  <div>
+    <label for="newItem">Add Item:</label>
+    <input id="newItem" #newItemName />
+    <button (click)="addItem(newItemName.value)">Add</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of shoppingItems">
+      {{ item }}
+    <button (click)="removeItem(item)">Remove</button></li>
+  </ul>
+</div>
